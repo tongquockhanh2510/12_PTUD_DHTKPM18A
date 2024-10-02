@@ -1,4 +1,6 @@
-package entity;
+package ENTITY;
+
+import java.util.Objects;
 
 public class LoaiToaTau {
 	private String maLoaiToa;
@@ -35,6 +37,22 @@ public class LoaiToaTau {
 	}
 	public void setHeSoGia(double heSoGia) {
 		this.heSoGia = heSoGia;
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(maLoaiToa);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		LoaiToaTau other = (LoaiToaTau) obj;
+		return Objects.equals(maLoaiToa, other.maLoaiToa);
 	}
 	@Override
 	public String toString() {

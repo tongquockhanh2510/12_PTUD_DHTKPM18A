@@ -1,4 +1,6 @@
-package entity;
+package ENTITY;
+
+import java.util.Objects;
 
 public class ToaTau {
 	private String maToaTau;
@@ -76,6 +78,27 @@ public class ToaTau {
 	}
 	public void setChuyenTau(ChuyenTau chuyenTau) {
 		this.chuyenTau = chuyenTau;
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(maToaTau);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ToaTau other = (ToaTau) obj;
+		return Objects.equals(maToaTau, other.maToaTau);
+	}
+	@Override
+	public String toString() {
+		return "ToaTau [maToaTau=" + maToaTau + ", thuTuToa=" + thuTuToa + ", soLuongCho=" + soLuongCho
+				+ ", soLuongChoTrong=" + soLuongChoTrong + ", soLuongChoDaDat=" + soLuongChoDaDat + ", soLuongChoDaMua="
+				+ soLuongChoDaMua + ", loaiToaTau=" + loaiToaTau + ", chuyenTau=" + chuyenTau + "]";
 	}
 	
 }

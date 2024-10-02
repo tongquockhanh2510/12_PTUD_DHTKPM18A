@@ -1,4 +1,4 @@
-package entity;
+package ENTITY;
 
 import java.util.Date;
 
@@ -54,6 +54,7 @@ public class ChiTietChuyenTau {
 	public void setSoKm(double soKm) {
 		this.soKm = soKm;
 	}
+	
 	@Override
 	public String toString() {
 		return "ChiTietChuyenTau [chuyenTau=" + chuyenTau + ", daTau=" + daTau + ", thoiGianDen=" + thoiGianDen

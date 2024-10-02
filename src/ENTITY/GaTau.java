@@ -1,4 +1,6 @@
-package entity;
+package ENTITY;
+
+import java.util.Objects;
 
 public class GaTau {
 	private String maGaTau;
@@ -35,6 +37,22 @@ public class GaTau {
 	}
 	public void setDiaChi(String diaChi) {
 		this.diaChi = diaChi;
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(maGaTau);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		GaTau other = (GaTau) obj;
+		return Objects.equals(maGaTau, other.maGaTau);
 	}
 	@Override
 	public String toString() {

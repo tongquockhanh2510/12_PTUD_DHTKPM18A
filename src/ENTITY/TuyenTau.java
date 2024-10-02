@@ -1,4 +1,6 @@
-package entity;
+package ENTITY;
+
+import java.util.Objects;
 
 public class TuyenTau {
 	private String maTuyenTau;
@@ -34,6 +36,22 @@ public class TuyenTau {
 	}
 	public void setMoTa(String moTa) {
 		this.moTa = moTa;
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(maTuyenTau);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		TuyenTau other = (TuyenTau) obj;
+		return Objects.equals(maTuyenTau, other.maTuyenTau);
 	}
 	@Override
 	public String toString() {
